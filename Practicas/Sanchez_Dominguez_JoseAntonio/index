@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Practica 1</title>
+    <style>
+      body {
+        background-color: gainsboro;
+      }
+
+      .Titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 250%;
+        padding-left: 35rem;
+        padding-right: 35rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background-color: darkgrey;
+      }
+
+      h4 {
+        font-size: 140%;
+        text-align: center;
+      }
+
+      .contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .contenidos {
+        margin: 4em;
+        background-color: rgb(255, 250, 219);
+        width: 60rem;
+      }
+
+      .texto {
+        padding: 10px;
+      }
+
+      .imagenes {
+        margin: 4em;
+        background-color: rgb(255, 250, 219);
+        width: 20rem;
+      }
+
+      .enlaces {
+        color: blue;
+        font-size: 0.5cm;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="Titulo">
+      <article>
+        <!-- TITULO -->
+        <h1>Sobre Mi</h1>
+      </article>
+    </section>
+    <section class="contenedor">
+      <div class="contenidos">
+        <h4>Aficiones</h4>
+        <div class="texto">
+          <p>
+            Mi afición favorita es pasar el tiempo con mis amigo ya sea por
+            internet a traves de discord o haciendo tomando algo. Tambien suelo
+            quedar con ellos a hacer otra de mis aficiones favoritas jugar al
+            padel. <br />
+            Fuera del deporte disfruto de llo que estudio por lo que parte de mi
+            tiempo va destinada a mejorar en ello. <br /><br />
+            A parte del padel practico futbol y baloncesto de forma cotidiana
+            aun que sinceramente lo último no se me da demasiado bien.
+          </p>
+        </div>
+      </div>
+      <div class="contenidos">
+        <h4>Enlaces Interesantes</h4>
+        <p>
+          <b
+            ><i class="enlaces">
+              <a href="https://www.marca.com/">Marca</a></i
+            ></b
+          >: <br />Esta es uno de mis diarios de deportes favorita <br />
+          <br />
+          <b
+            ><i class="enlaces">
+              <a href="https://www.youtube.com/@Worldpadeltour"
+                >World Padel Tour</a
+              ></i
+            > </b
+          >: <br />Aqui es donde se retrasmiete el padel de forma mundial.<br />
+          <br/>
+        </p>
+      </div>
+      <div class="contenidos">
+        <h4>Actividades Recientes</h4>
+        
+      </div>
+    </section>
+    <br />
+    <section class="contenedor">
+      <div class="imagenes">
+        <h4>Aficiones</h4>
+      </div>
+    </section>
+    <section class="contenedor">
+      <div class="contenidos">
+        <h4>Aficiones</h4>
+      </div>
+    </section>
+  </body>
+</html>
