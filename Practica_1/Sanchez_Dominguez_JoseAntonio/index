@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Practica 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+  <header class="cabecera">
+    <nav>
+      <ul>
+        <li><a href="#1">
+            <h1>Sobre Mi</h1>
+        </li>
+        <li><a href="#1">Aficiones</a></li>
+        <li><a href="#1">Enlaces Interesantes</a></li>
+        <li><a href="#1">Actividades Recientes</a></li>
+        <li><a href="#2">Ciudades Visitadas</a></li>
+        <li><a href="#3">Información</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="contenedor1" id="1">
+
+
+    <div class="contenidos">
+      <h4>Aficiones</h4>
+      <div class="texto">
+        <p>
+          Mi afición favorita es pasar el tiempo con mis amigo ya sea por
+          internet a traves de discord o haciendo tomando algo. Tambien suelo
+          quedar con ellos a hacer otra de mis aficiones favoritas jugar al
+          padel. <br />
+          Fuera del deporte disfruto de llo que estudio por lo que parte de mi
+          tiempo va destinada a mejorar en ello. <br /><br />
+          A parte del padel practico futbol y baloncesto de forma cotidiana
+          aun que sinceramente lo último no se me da demasiado bien.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="contenidos">
+      <h4>Enlaces Interesantes</h4>
+      <p class="texto">
+        <b><i class="enlaces">
+            <a href="https://www.marca.com/">Marca</a></i></b>: <br />Esta es uno de mis diarios de deportes favorita
+        <br />
+        <br />
+        <b><i class="enlaces">
+            <a href="https://www.youtube.com/@Worldpadeltour">World Padel Tour</a></i> </b>: <br />Aqui es donde se
+        retrasmiete el padel de forma mundial.<br />
+        <br />
+      </p>
+    </div>
+
+
+    <div class="contenidos">
+      <h4>Actividades Recientes</h4>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Atividad</th>
+            <th>Fecha</th>
+            <th>Enlaces</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Modificación de una página</p>
+            </td>
+            <td>
+              <p>Recurrente</p>
+            </td>
+            <td>
+              <a href="https://www.campingelnogalejo.es">
+                <p>Camping</p>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Estudios en Medac</p>
+            </td>
+            <td>
+              <p>Recurrente</p>
+            </td>
+            <td>
+              <a href="https://www.Medac.es">
+                <p>Medac</p>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <h4 id="2">Ciudades visitadas</h4>
+
+
+  <section class="contenedor">
+    <h4>Madrid</h4>
+    <div class="imagenes">
+      <div class="contenidos"></div>
+      <img src="img/madrid.jpg">
+    </div>
+    <h4>Paris</h4>
+    <div class="imagenes">
+      <div class="contenidos"></div>
+      <img src="img/paris.jpg">
+    </div>
+    </div>
+  </section>
+
+
+  <section class="contenedor" id="3">
+    <div class="contenidos">
+      <h4>Información</h4>
+      <p class="texto">Soy Jose Antonio Sanchez tengo 20 años a punto de los 21 soy una persona que desde corta edad se
+        ha interesado
+        por los ordenadores y videojuegos, aunque mi familia no es algo del que hagan un uso diario. Al terminar
+        bachillerato pase dos años en DAM de un instituto en Portada Alta Málaga. No fue muy bien ahora me encuentro en
+        2º de DAW en medac.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="contenedor">
+    <h4>Gracias por visitar</h4>
+    <div class="imagenes">
+      <div class="contenidos"></div>
+      <img src="img/alvin.jpg">
+    </div>
+  </section>
+
+
+</body>
+
+</html>

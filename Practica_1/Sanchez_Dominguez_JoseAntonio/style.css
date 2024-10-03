@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(253, 255, 223);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Arial Black', Gadget, sans-serif;
+  }
+
+  p {
+    font-family: 'Verdana', Geneva, sans-serif;
+    font-size: 16px;
+  }
+
+  .cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #5e5c5c;
+    padding: 15px 0;
+    z-index: 1000;
+  }
+
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    margin: 0 15px;
+  }
+
+  header nav ul li h1 {
+    margin: 0 3rem 0 0;
+    color: rgb(0, 0, 0);
+
+  }
+
+
+  header nav ul li a {
+    color: white;
+    font-family: 'Verdana', Geneva, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 140%;
+    text-align: center;
+  }
+
+  .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .contenedor1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+
+  .contenidos {
+    margin: 4rem;
+    width: 60rem;
+  }
+
+  .texto {
+    padding: 10px;
+  }
+
+  .imagenes {
+    margin: 4em;
+    width: 20rem;
+  }
+
+  .enlaces {
+    color: blue;
+    font-size: 0.5cm;
+  }
+
+  .tabla {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  .tabla thead tr th {
+    padding: 0.4rem;
+    background-color: #5e5c5c;
+    color: white;
+  }
+
+  .tabla tbody tr td {
+    padding: 0.4rem;
+    background-color: white;
+  }
+
+  img {
+    width: 20rem;
+  }
+  
