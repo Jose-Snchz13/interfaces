@@ -32,7 +32,8 @@ body{
     grid-template-columns: calc(25% - 10px) calc(50% - 10px) calc(25% - 10px);
 }
 .layout__box{
-
+/*
+*/
 }
 .layout__box--blue{
     background-color: blue;
