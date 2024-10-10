@@ -1,0 +1,28 @@
+/* <!-- Maquetación
+        CABECERA    (arriba del todo y que ocupe el 100%)
+             Título
+        MENÚ        (debajo de la cabecera y que ocupe el 100%)
+        CONTENIDO   (debajo del menú y que ocupe el 80%)
+        LATERAL     (debajo del menú y a la derecha del contenido)
+        FOOTER      (abajo del todo y ocupe el 100%)
+    --> */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+.website{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 120px 70px 2fr 70px;
+
+    grid-template-areas: 
+    "cabecera cabecera cabecera cabecera cabecera"
+    "menu menu menu menu lateral"
+    "contenido contenido contenido contenido lateral"
+    "footer footer footer footer lateral";
+}
