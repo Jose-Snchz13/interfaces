@@ -1,3 +1,12 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
 /* <!-- Maquetación
         CABECERA    (arriba del todo y que ocupe el 100%)
              Título
@@ -6,15 +15,6 @@
         LATERAL     (debajo del menú y a la derecha del contenido)
         FOOTER      (abajo del todo y ocupe el 100%)
     --> */
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
-body{
-    font-family: sans-serif;
-    text-align: center;
-}
 .website{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -22,7 +22,63 @@ body{
 
     grid-template-areas: 
     "cabecera cabecera cabecera cabecera cabecera"
-    "menu menu menu menu lateral"
+    "menu menu menu menu menu"
     "contenido contenido contenido contenido lateral"
-    "footer footer footer footer lateral";
+    "footer footer footer footer footer";
+
+    /* grid-column-gap: 10px; */
+    width: 80%;
+    /* height: 100%; */
+    height: 95vh; /*Es el 95% de la altura de nuestro navegador*/
+    margin: 0px auto;
+    border: 1px solid black;
+}
+.webside__header{
+    grid-area: cabecera;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.website__menu{
+    grid-area: menu;
+    background-color: bisque;
+    color: black;
+    line-height: 70px;
+}
+.menu__list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    list-style: none;
+}
+.list__item a{
+    color: black;
+    font-size: 18px;
+}
+.website__content{
+    grid-area: contenido;
+    grid-gap: 20px;
+    padding: 20px;    
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.content__article{
+    /* display: flex;
+    flex-basis: calc(100%/4 - 20px); */
+    background-color: cornsilk;
+    border: 1px solid black;
+}
+.website__sidebar{
+    grid-area: lateral;
+    background-color: tomato;
+}
+.website__footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
