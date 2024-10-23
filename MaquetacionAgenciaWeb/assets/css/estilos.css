@@ -8,7 +8,7 @@
     --color-secondary: #fff;
     --color-banner: #2522BA;
     --color-text-btn: #0d6efd;
-    --colog-bg-btn: #ffdc60;
+    --color-bg-btn: #ffdc60;
     --color-subtitle: #c75c6f;
     --color-title: #292930;
     --color-bg-services: #f8f8f8;
@@ -77,13 +77,17 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     margin: 0 2.4rem;
 }
 .nav__title{
-    /*position*/position: relative;
-    display: inline-block;
+    /*position*/
+    position: relative;
+    display: grid;
     line-height: 6rem;
     font-weight: 500;
     color: var(--color-text-body);
     /*Efecto*/
     transition: all 300ms ease-in-out;
+
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 .nav__icon{
     font-size: 1rem;
@@ -117,46 +121,96 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 
 .nav__submenu{
-    /* position */
-    /* position: fixed; */
-    
+    /*position*//*position: fixed;
+    */display: block;
+    position: absolute;
+    top: 100%;
+    left: 2rem;
     min-width: 19rem;
     padding: 1.5rem 1rem;
     background-color: var(--color-secondary);
     box-shadow: 0px 13px 48px 0 rgba(0,0,0,15%);
-    
-    /* visibility, opacity y efecto */
-
+    /*visibility,opacityyefecto*/
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease-in-out;
 }
 
 .submenu__item{
     /* efecto */ 
+    opacity: 0;
+    visibility: translateX(3rem);
+    transition: all 300ms ease-in-out;
 }
 
 /* efecto */
-
+.submenu__item:nth-child(1){
+    transition-delay: 100ms;
+}
+.submenu__item:nth-child(2){
+    transition-delay: 200ms;
+}
+.submenu__item:nth-child(3){
+    transition-delay: 300ms;
+}
+.submenu__item:nth-child(4){
+    transition-delay: 400ms;
+}
+.submenu__item:nth-child(5){
+    transition-delay: 500ms;
+}
 
 .submenu__title{
-    /* position */ 
+    /*position*/position: relative;
     font-size: 1.4rem;
     text-transform: capitalize;
     text-decoration: none;
     font-weight: 500;
     color: var(--color-text-body);
     padding: 0.7rem 1.5rem;
-    /* efecto */
-
+    /*efecto*/
+    transition: all 300ms ease-in-out;    
 }
 
 /* efectos varios */
+.nav__item:hover>.nav__submenu{
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    left: 0;
+}
+.nav__item:hover>.nav__submenu>.submenu__item{
+    opacity: 1;
+    transform: translateX(0);
+    /* z-index: 99;
+    left: 0; */
+}
+.submenu__title:hover{
+    color: var(--color-primary);
+    transform: scale(1.1);
+}
+/*pseudoelemento para el menu*/
+.submenu__title::before{
+    content: "";
+    height: 0.1rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0.5rem;
+    left: 7.5%;
+    opacity: 0;
+    transition: all 300ms linear;
+}
 
-
-
+.submenu__title:hover::before{
+    width: 85%;
+    opacity: 1;
+}
 
 /* Estilos para el Banner */
 .layout__banner{
     /* position */
-
+    position: relative;
     min-height: 60rem;
     /*border: 2px solid red; */
     margin: 0 3rem;
@@ -171,8 +225,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .banner__content{
     /* position */
-
-
+    position: relative;
+    display: inline-block;
     width: 50%;
     padding: 0 1.5rem;
     z-index: 3;
@@ -194,50 +248,163 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     text-align: center;
     box-shadow: 0px 45px 70px -25px var(--color-primary);
     /* efecto */
+    transition: all 300ms linear;
 }
 /* efecto */
+.banner__btn:hover{
+    background-color: var(--color-bg-btn);
+    color: var(--color-bg-dark);
+    /* sombra */
+    box-shadow: 2px 2px 8px 0 var(--color-bg-btn), 4px 4px 24px 0 black, 0px 0px 48px 2px yellow;
 
+}
 
 .shapes__item{
     /* position y z-index */
-    
+    position: absolute;    
+    z-index: 2;
     pointer-events: none;
 }
 .shapes__item--shape1{
-    /* position y animación */
+    /*positionyanimación*/right: 0;
+    top: 0;
+    animation-name: muestraDerecha;
+    animation-duration: 2s;
+}
+@keyframes muestraDerecha {
+    0%{
+        transform: translateX(50%);
+}100%{
+        transform: translateX(0);
+}   
 }
 
 .shapes__item--shape2{
     /* position y animación */
+    bottom: 0;
+    left: 0;
+    animation-name: muestraIzquierda;
+    animation-duration: 2s;
+}
+@keyframes muestraIzquierda {
+    0%{
+        transform: translateX(-50%);
+}100%{
+        transform: translateX(0);
+}   
+}
+.shapes__item--shape3{
+    /*positionyanimación*/top: 34%;
+    left: 50%;
+    animation: mueveShape3 20s infinite;
 }
 
-.shapes__item--shape3{
-    /* position y animación */
+@keyframes mueveShape3 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(50px) translateY(-200px);
+    }
+    70%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+
 }
 
 .shapes__item--shape4{
-    /* position y animación */
+    /*positionyanimación*/
+    top: 75%;
+    animation: mueveShape4 30s infinite;
 }
+
 .shapes__item--shape4 .shapes__img{
     opacity: 0.5;
     width: 7.5rem;
 }
+@keyframes mueveShape4 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(500px);
+}
+    70%{
+        transform: translateX(450px) translateY(45px);
+}
+    100%{
+        transform: translateX(0) translateY(0);
+}
 
+}
 
 .shapes__item--shape5{
     /* position y animación */
+    top: 10%;
+    left: 20%;
+    animation: mueveShape5 25s infinite;
+    opacity: 0.7;
+}
+@keyframes mueveShape5 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateY(600px) translateX(-200px);
+}
+    70%{
+        transform: translateX(450px) translateY(600px);
+}
+    100%{
+        transform: translateX(0) translateY(0);
+}
+
 }
 
 .shapes__item--shape6{
     /* position y animación */
+    top: 80%;
+    left: 20%;
+    animation: mueveShape6 15s infinite;
+}
+@keyframes mueveShape6 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(500px);
+}
+    70%{
+        transform: translateX(200px) translateY(300px);
+}
+    100%{
+        transform: translateX(0) translateY(0);
+}
+
 }
 .shapes__item--shape7{
     /* position y animación */
+    top: 0;
+    right: 5%;
+    z-index: 1;
+    animation-name: muestraArriba;
+    animation-duration: 2s;
 }
-
+@keyframes muestraArriba {
+    0%{
+        transform: translateY(-50%);
+}100%{
+        transform: translateY(0);
+}   
+}
 /* Estilos sección Servicios */
 .layout__services{
     /* position y z-index */
+    position: relative;
+    z-index: 1;
 
     margin: 14rem 10rem;
     margin-bottom: 4rem;
@@ -274,13 +441,16 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .services__list{
     /* flex */
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem; /* separación entre los elementos */
 }
 .services__service{
     /* flex */
-
-    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    
+    height: 55%;
     padding: 5rem 4rem;
     margin-bottom: 4rem;
     border-radius: 3rem;
@@ -289,8 +459,12 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     border: 1px solid;
     border-image-source: linear-gradient(90deg, var(--color-bg-services), rgba(255,255,255,0));
     /* efecto */
-
+    transition: all 300ms linear;
 }
+.services__service:hover{
+    background-color: var(--color-bg-services);
+}
+
 
 .service__container-img{
     margin-right: 2.5rem;
@@ -299,6 +473,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .service__content{
     /* Relacionado con flex grow y flex basis */
+    
 }
 .service__title{
     color: var(--color-title);
@@ -307,6 +482,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     line-height: 1.4;
     margin-bottom: 3rem;
     /* efecto */
+    transition: all 300ms ease-in-out;
 }
 .service__description{
     overflow: hidden;
@@ -315,15 +491,26 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .service__more{
     /* position */
-
+    position: relative;
+    display: inline-block;
     font-weight: 500;
     font-size: 1.7rem;
     padding-left: 5rem;
     /* efecto */
+    transition: all 300ms linear;
 }
 
 /* pseudoelemento before */
-
+.service__more::before{
+    content: "";
+    width: 3.4rem;
+    height: 1.5px;
+    background-color: var(--color-text-body);
+    position: absolute;
+    left: 0;
+    /* top: 10%; */
+    bottom: 50%;
+}
 .service__more:hover,
 .service__title:hover{
     color: var(--color-primary);
@@ -334,23 +521,26 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 /* para generar el escalonado de las tarjetas de servicios */
 .services__service--bottom{
-    
+    margin-top: 20rem;
 }
 .services__service--middle{
-    
-}
-.services__service--top{
-    
+    margin-top: 10rem;
 }
 
 /* coloco a las formas detrás de los servicios */
 .service-shapes__item{
     /* position y z-index */
+    position: absolute;
+    z-index: -1;
+
 
     pointer-events: none;
 }
 .service-shapes--shape1{
     /* position */
+    top: -10%;
+    right: 0;
+
 }
 .service-shapes--shape2{
     /* position */
