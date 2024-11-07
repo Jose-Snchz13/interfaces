@@ -181,17 +181,33 @@ body{
 }
 
 /* Maquetando el Banner */
-.content__banner{    
+.content__banner{  
     width: 95.5%;
     height: 100px;
     border: 2px solid black;
     box-shadow: 0px 0px 2px var(--color-gray);
-    background-color: var(--color-grey);
-    background-position: -200px -200px;
+    background: url(../img/PRAGA.JPG);
     margin: 20px auto;
     overflow: hidden;
     /* animación */    
+    animation: sexo 30s infinite linear;
 }
+
+@keyframes sexo{
+    0%{
+        background-position: 30px 1000px;
+    }
+    /* 25%{
+        background-position: 1600px 1400px;
+    }*/50%{
+        background-position: 30px 700px;
+    }/*75%{
+        background-position: 1600px 1400px;
+    }*/100%{
+        background-position: 30px 1000px;
+    } 
+}
+
 .content__banner form{
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr 1fr;
@@ -201,7 +217,6 @@ body{
     
 }
 .banner__info{
-    background-color: var(--color-grey);
     width: 25%;
 }
 input{
