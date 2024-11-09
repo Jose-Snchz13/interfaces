@@ -190,10 +190,10 @@ body{
     margin: 20px auto;
     overflow: hidden;
     /* animación */    
-    animation: sexo 30s infinite linear;
+    animation: move 30s infinite linear;
 }
 
-@keyframes sexo{
+@keyframes move{
     0%{
         background-position: 30px 1000px;
     }
@@ -260,10 +260,24 @@ input{
     margin-top: 40px;
     cursor: pointer;
     /* transicion */
-
+    transition: all 300ms ease-in-out;
 }
 /*efecto hover en las cartas */
-
+.cards__card:hover{
+    transform: scale(1.1);
+}
+.cards__card::before{    
+    width: 0;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+.cards__card:hover::before{
+    width: 100%;
+    opacity: 1;
+}
 
 .cards__card:last-child{
     margin-right: 0px;
@@ -337,7 +351,7 @@ input{
     margin-top: 0px;
 }
 .lateral__search{
-    width: 90%;
+    /* width: 90%; */
     height: 30px;
     margin: 10px auto;
     background-color: var(--color-text-white);
@@ -345,9 +359,14 @@ input{
     border-radius: 5px;
     box-shadow: 1px 1px 4px var(--color-backgroung) inset;
 }
+.lateral__search form{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
 
 .lateral__search input[type="text"]{
-    width: 85%; /* para que quepa el botón */
+    width: 95%; 
+    /* para que quepa el botón */
     height: 30px;
     border: none;
     padding-left: 5px;
@@ -486,14 +505,13 @@ input{
     transform: translateX(-80%); /*lo desplazo para que cuando se lance el hover se vea el movimiento de la traslación*/
     opacity: 0; /*lo oculto*/
     /* transición el cambio */
-
+    
 }
-/* efecto hover sobre el div de lateral__social */
-
 
 /* Artículos */
 .content__articles{
-    float: left; /* es necesario flotarlo puesto que he incluido el div clearfix*/
+    float: left; 
+    /* es necesario flotarlo puesto que he incluido el div clearfix*/
     width: 860px;
 }
 
@@ -513,6 +531,7 @@ input{
     margin-top: 20px;
     margin-bottom: 15px;
     color: beige;
+    
 }
 h1, h2, h3, h4{
     color: beige;
@@ -527,6 +546,22 @@ h1, h2, h3, h4{
     background: var(--color-text-white);
     color: beige;
     box-shadow: 1px 1px 2px var(--color-box-shadow);
+    transition: all 300ms ease-in-out;
+}
+.articles__article:hover{
+    transform: scale(1.1);
+}
+.articles__article::before{    
+    width: 0;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+.articles__article:hover::before{
+    width: 100%;
+    opacity: 1;
 }
 
 .articles__article h4{
@@ -562,25 +597,54 @@ h1, h2, h3, h4{
     margin-bottom: 10px;
     font-size: 15px;
 }
+.articles__members{
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+    float: left;
+    margin-top: -25%;
+    margin-left: -18px;
+    width: 100%;
+}
 
-.articles__blog{
-    height: 100px;
-    margin-top: 60px;
-    line-height: 100px;
+.members__member{  
     text-align: center;
-    font-family: "BebasNeue";
-    /* transición */
-
-}
-.articles__blog a{
-    font-family: "BebasNeue";
-    font-size: 40px;
-    letter-spacing: 3px;
+    /* float: left; */
+    width: 300px;
+    height: 280px;
+    border: 1px solid var(--color-backgroung);
+    background-color: var(--color-grey);
     color: beige;
-    text-decoration: none;
-    /* transición */
+    box-shadow: 1px 1px 4px var(--color-box-shadow);
+    overflow: hidden;
+    margin: 22px;
+    cursor: pointer;
+    /* transicion */
+    transition: all 300ms ease-in-out;
 }
-/* efecto de hover sobre articles__blog */
+.members__member:hover{
+    transform: scale(1.1);
+}
+.members__member::before{    
+    width: 0;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+.members__member:hover::before{
+    width: 100%;
+    opacity: 1;
+}
+
+.members__member img{
+    width: 300px;
+    height: 180px;
+}
+
+
 
 
 /* FOOTER */
@@ -625,6 +689,7 @@ h1, h2, h3, h4{
     margin: 20px;
     font-size: 25px;
 }
+
 .footer__list li{
     margin-top: 10px;
     padding: 5px;
@@ -633,10 +698,29 @@ h1, h2, h3, h4{
 .footer__list li a{
     display: block;
     height: 40px;
-    /* transición */
+    /*transición*/
+    transition: all 300ms ease-in-out;
 }
 /* efecto de hover sobre cada li */
-
+.footer__list li a:hover{
+    color: var(--color-primary);
+    transform: scale(1.1);
+}
+.footer__list li a::before{
+    content: "";
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+.footer__list li a:hover::before{
+    width: 100%;
+    opacity: 1;
+}
 
 .content__footer iframe{
     width: 100%;
