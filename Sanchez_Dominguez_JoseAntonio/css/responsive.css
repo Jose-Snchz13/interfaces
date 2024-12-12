@@ -1,0 +1,109 @@
+/* del 0 al 1245px aplico esto */
+@media (max-width: 1250px){ 
+    .header__wrap, .content__wrap, .footer__wrap {
+        width: 90%; /* Reduce el ancho del contenedor */
+    }
+    .content__lateral{
+        visibility: hidden;
+    }
+    .header__logo h3 {
+        font-size: 30px; /* Reduce el tamaño de la fuente en la cabecera */
+        margin-right: 40px;
+    }
+    .menu__list li {
+        font-size: 20px;
+        margin: 0px 10px;
+    }
+    .content__banner {
+        height: 80px; /* Reduce el tamaño del banner */
+    }
+    .content__cards {
+        flex-direction: column; /* Apila las tarjetas en una columna */
+        align-items: center;
+    }
+    .cards__card {
+        width: 80%; /* Ajusta el ancho de cada tarjeta */
+        height: auto;
+        margin: 10px 0;
+    }
+    .content__articles {
+        width: 90%;
+        float: none;
+        position: absolute;
+        margin-right: 35%;
+        margin-bottom: -100px;
+    }   
+    
+    .articles__members { 
+        float: none;
+        position: absolute;
+        margin-left: -5%;
+        margin-top: 760px;
+    }
+    
+
+    .footer__wrap > div {
+        width: 33%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 1079px){
+
+}
+@media (max-width: 969px){
+ 
+}
+@media (max-width: 920px){
+    .content__banner form {
+        visibility: hidden;
+    }
+    .articles__members { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;  
+        width: 60%;
+        margin-top: 850px;   
+        grid-column-gap: 10%;
+        margin-left: -10px;
+    }
+    .content__footer{
+        margin-top: 400px;        
+    }
+    
+}
+
+@media (max-width: 890px){
+
+}
+
+@media (max-width: 799px){
+ 
+}
+/* movemos ya el menú y cambiamos estructura */
+@media (max-width: 800px){
+    .articles__members { 
+        margin-left: 0; 
+        grid-template-columns: 1fr; 
+        margin-top: 900px; 
+        left: 25%;
+    }
+    .content__footer{
+        margin-top: 1100px;        
+    }
+    .footer__wrap{
+        visibility: hidden;
+    }
+}
+/* Visionado para Móviles */
+@media (max-width: 660px){
+    
+}
+@media (max-width: 550px){
+
+}
+
+@media (max-width: 470px){
+ 
+}
+
+

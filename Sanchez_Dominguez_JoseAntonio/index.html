@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
+    <meta name="viewport" content="width=device-width, user-scalable=no"> 
+    <title>Proyecto Web</title>
+    <link rel="shortcut icon" href="img/supertux.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset_estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Inicio Cabecera -->
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__logo"> 
+                <img src="./img/logo.png" alt="">
+                <h3>sYMPLEX</h3>
+            </div>
+            <nav class="header__menu">
+                <ul class="menu__list">
+                    <li><a href="#">VIVE LO INESPERADO</a></li>
+                    <li><a href="#">CONOCE MUNDO</a></li>
+                    <li><a href="#">UNETE A NOSOTROS</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <!-- fin de la Cabecera -->
+    
+    <main class="content__wrap">
+        <section class="content__info">
+            <!-- Inicio Banner -->
+            <div class="content__banner">
+                <form action="" method="get">
+                    <div class="banner__info">
+                        <h3>Destino</h3>
+                        <input type="text">
+                    </div>    
+                    <div class="banner__info">
+                        <h3>Llegada</h3>
+                        <input type="text">
+                    </div>    
+                    <div class="banner__info">
+                        <h3>Salida</h3>
+                        <input type="text">
+                    </div>   
+                    <div class="banner__info">
+                        <h3>Viajeros</h3>
+                        <input type="text">
+                    </div>                      
+                </form>
+            </div>
+            <!-- fin de Banner -->
+             <div class="content__types">
+                <div class="types__type">
+                    <img src="./img/casa_logo.jpg" >
+                    <h5>Hoteles</h3>
+                </div>
+                <div class="types__type">
+                    <img src="./img/casa_logo.jpg" >
+                    <h5>Camping</h3>
+                </div>
+                <div class="types__type">
+                    <img src="./img/casa_logo.jpg" >
+                    <h5>Casas rurales</h3>
+                </div>
+             </div>
+            <!-- Inicio Tarjetas -->
+            <div class="content__cards">
+                <div class="cards__card">
+                    <img src="./img/casa1.jpg" >
+                    <h2 class="card__category">Casa Granjero</h2>
+                </div>
+                <div class="cards__card">
+                    <img src="./img/casa2.jpg" >
+                    <h2 class="card__category">Casa +18</h2>
+                </div>
+                <div class="cards__card">
+                    <img src="./img/casa3.jpg" >
+                    <h2 class="card__category">La cienaga de Shrek</h2>
+                </div>
+            </div>
+            <!-- fin de Tarjetas -->
+        </section>
+        <!-- Inicio de Barra Lateral -->
+        <div class="clearfix"></div>
+        <aside class="content__lateral">
+            <h3 class="lateral__title">BUSCAR</h3>
+            <div class="lateral__search">
+                <form>
+                    <input type="text">
+                    <input type="button" value="L" class="search__icon">
+                </form>
+            </div>
+            <h3 class="lateral__title">LOGIN</h3>
+            <div class="lateral__login aside-box">
+                <form>
+                    <label class="lateral-box__user aside-box__icon">U</label>
+                    <input type="email">
+                    <label class="lateral-box__password aside-box__icon">w</label>
+                    <input type="password">
+                    <input type="submit" value="Entrar">
+                    <input type="reset" value="Limpiar">
+                    <a href="#">Regístrate aquí</a>
+                    <a href="#">Has olvidado tu contraseña?</a>
+                </form>
+            </div>
+            <h3 class="lateral__title">REDES SOCIALES</h3>
+            <div class="lateral__social aside-box">
+                <div class="social__twitter">
+                    <a href="#" class="social__icon">t</a>
+                    <p class="social__overlay">
+                        Twitter
+                    </p>
+                </div>
+                <div class="social__facebook">
+                    <a href="#" class="social__icon">f</a>
+                    <p class="social__overlay">
+                        Facebook
+                    </p>
+                </div>
+                <div class="social__youtube">
+                    <a href="#" class="social__icon">y</a>
+                    <p class="social__overlay">
+                        Youtube
+                    </p>
+                </div>
+            </div>
+            
+        </aside>
+        <!-- fin de Aside -->
+        <!-- Inicio de los Artículos -->
+        <section class="content__articles">
+            <h2 class="articles__title">Lo que nuestros clientes opinan de nosotros</h2>
+            <div class="clearfix"></div>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de enero</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Juana de arcos</a>
+                </h4>
+                <p>"Hice la reserva de último minuto y estaba algo nervioso, pero esta página fue increíble. En pocos clics, tenía mis boletos y confirmaciones en el correo electrónico. Todo funcionó a la perfección y la información fue clara y detallada. Muy recomendable para quienes buscan un proceso de reserva rápido y confiable."</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de febrero</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Juan Carlos Carrillo</a>
+                </h4>
+                <p>"Esta página ofrece una increíble variedad de destinos y opciones de alojamiento. Encontré el hotel perfecto para mi viaje y a un precio que se ajustaba a mi presupuesto. Lo único que mejoraría es el tiempo de respuesta en el chat de ayuda, pero fuera de eso, la experiencia fue genial."</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de marzo</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">El pepas XD</a>
+                </h4>
+                <p>"¡Me encantó la facilidad de reservar a través de esta página! La navegación es intuitiva, los precios fueron justos y había varias opciones para personalizar mi viaje. Todo salió como esperaba y el servicio al cliente fue rápido y amable cuando tuve una consulta. Sin duda, reservaré con ellos otra vez."</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de abril</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Manolo el del bombo</a>
+                </h4>
+                <p>"La experiencia de reserva fue en su mayoría positiva. Al principio, tuve un problema con el pago, pero el servicio de atención al cliente fue muy atento y me ayudó rápidamente. Los precios fueron competitivos y no hubo cargos ocultos. Definitivamente, una buena opción para planear viajes."</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de agosto</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Enrique Serrato</a>
+                </h4>
+                <p>"Esta fue mi primera vez usando esta página para reservar un viaje, y no puedo estar más contento. Todo el proceso fue sencillo, y recibí mi confirmación de inmediato. Durante el viaje, todos los detalles estaban en orden, y no tuve que preocuparme por nada. ¡Muy recomendable!"</p>
+            </article>
+            
+        </section>
+        <section>
+            <article class="articles__members">
+                <div class="members__member">
+                    <img src="./img/josea.jpg" >
+                    <h2 class="card__category">Jose Antonio Sanchez Dominguez</h2>
+                </div>
+                <div class="members__member">
+                    <img src="./img/mateo1.jpg" >
+                    <h2 class="card__category">Alejandro Mateo</h2>
+                </div>
+                <div class="members__member">
+                    <img src="./img/paco.jpg" >
+                    <h2 class="card__category">Francisco Fernandez</h2>
+                </div>
+                <div class="members__member">
+                    <img src="./img/mateo.jpg" >
+                    <h2 class="card__category">Guillermo Antiñolo</h2>
+                </div>
+            </article>
+        </section>
+        <!-- fin de los Artículos -->
+    </main>
+    <div class="clearfix"></div>
+    <!-- Inicio de Pié de Página -->
+    <footer class="content__footer">
+        <div class="footer__wrap">
+            <div class="footer__menuFooter">
+                <h5 class="footer__title">MENÚ</h5>
+                <ul class="footer__list">
+                    <li><a href="#">Hoteles</a></li>
+                    <li><a href="#">Casas rurales</a></li>
+                    <li><a href="#">Campings</a></li>
+                </ul>
+            </div>
+            <div class="footer__location">
+                <h5 class="footer__title">DÓNDE ESTAMOS?</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2996623515555!2d-4.462811723546774!3d36.69133637227841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20%F0%9F%A5%87%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1698701252334!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer__info">
+                <h5 class="footer__title">Desarrollado con</h5>
+                <p>
+                    <img src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="Creado con HTML y CSS">
+                </p>
+                <h5 class="footer__title">Optimizado para</h5>
+                <p class="footer__browsers">
+                    <a href="#">
+                        <img src="img/firefox-icon.png" alt="Firefox">
+                    </a>
+                    <a href="#">
+                        <img src="img/chrome.png" alt="Chrome">
+                    </a>
+                    <a href="#">
+                        <img src="img/safari.png" alt="Safari">
+                    </a>
+                    <a href="#">
+                        <img src="img/android.png" alt="Android">
+                    </a>
+                    <a href="#">
+                        <img src="img/Opera_256x256.png" alt="Opera">
+                    </a>
+                </p>
+                <h5 class="footer__title">Jose Antonio</h5>
+                <p>&copy; Jose Antonio Sánchez Domínguez - WEB</p>
+            </div>
+        </div>
+    </footer>
+    <!-- fin de Pié de Página -->
+</body>
+</html>
